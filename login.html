@@ -1,0 +1,78 @@
+<!-- Zachary Hutton ID#2507386
+     IA#2: Dynamic Event Registration System ("Coding Conf")
+     Course Title: CIT2011 - Web Programming
+     Assignment Due Date: Week 9
+     Technologies Required: HTML5, CSS3, Native JavaScript (ES6+)
+     login.html: registration form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zachary Hutton">
+  <meta name="keywords" content="Coding Conf, register, ticket">
+  <title>Register | IA#2: Dynamic Event Registration System ("Coding Conf")</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">
+      <img class="logo" src="assets/images/logo-full.svg" alt="Coding Conf home" width="209" height="30">
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="login.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+      <p class="lead">Secure your spot at this year's biggest coding conference.</p>
+    </section>
+
+    <!-- registration form, checked by js/validation.js -->
+    <section>
+      <form id="ticket-form" class="ticket-form" action="ticket.html" novalidate>
+        <div class="field">
+          <label for="avatar">Upload Avatar</label>
+          <input class="upload-input" type="file" id="avatar" name="avatar" accept="image/jpeg, image/png" aria-describedby="avatar-hint avatar-error">
+          <img class="avatar-preview" id="avatar-preview" src="assets/images/logo-mark.svg" alt="" width="80" height="80">
+          <p class="hint" id="avatar-hint">JPG or PNG, max size: 500KB.</p>
+          <p class="error" id="avatar-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="full-name">Full Name</label>
+          <input class="text-input" type="text" id="full-name" name="fullName" autocomplete="name" aria-describedby="full-name-error">
+          <p class="error" id="full-name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input class="text-input" type="email" id="email" name="email" autocomplete="email" placeholder="example@email.com" aria-describedby="email-error">
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="github">GitHub Username</label>
+          <input class="text-input" type="text" id="github" name="github" placeholder="@yourusername" aria-describedby="github-error">
+          <p class="error" id="github-error" aria-live="polite"></p>
+        </div>
+
+        <button class="button" type="submit">Generate My Ticket</button>
+        <p class="error" id="form-error" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Coding Conf. Zachary Hutton, CIT2011 - Web Programming.</p>
+  </footer>
+
+  <script src="js/validation.js"></script>
+</body>
+</html>
