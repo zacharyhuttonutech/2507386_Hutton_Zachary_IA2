@@ -6,6 +6,10 @@
 
 **Student:** Zachary Hutton (2507386)
 
+**GitHub Repository:** https://github.com/zacharyhuttonutech/2507386_Hutton_Zachary_IA2
+
+**Live Site:** https://zacharyhuttonutech.github.io/2507386_Hutton_Zachary_IA2/
+
 ## About
 
 A three page registration site for the Coding Conf event. The user fills in the registration form on the login page, the details are saved in localStorage, and ticket.html builds the ticket from the saved details.
