@@ -1,0 +1,69 @@
+<!-- Zachary Hutton ID#2507386
+     IA#2: Dynamic Event Registration System ("Coding Conf")
+     Course Title: CIT2011 - Web Programming
+     Assignment Due Date: Week 9
+     Technologies Required: HTML5, CSS3, Native JavaScript (ES6+)
+     ticket.html: ticket page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zachary Hutton">
+  <meta name="keywords" content="Coding Conf, ticket">
+  <title>Your Ticket | IA#2: Dynamic Event Registration System ("Coding Conf")</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">
+      <img class="logo" src="assets/images/logo-full.svg" alt="Coding Conf home" width="209" height="30">
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- the name and email are filled in by js/ticket.js -->
+    <section class="intro">
+      <h1>Congrats, <span class="gradient-text" id="congrats-name"></span>! Your ticket is ready.</h1>
+      <p class="lead">We've emailed your ticket to <span class="orange-text" id="congrats-email"></span>.</p>
+    </section>
+
+    <!-- glassmorphism ticket -->
+    <section>
+      <article class="ticket">
+        <div class="ticket-top">
+          <img src="assets/images/logo-mark.svg" alt="" width="40" height="40">
+          <div>
+            <h2 class="ticket-title">Coding Conf</h2>
+            <p class="ticket-info">October 26, 2026 / Papine, Kgn</p>
+          </div>
+        </div>
+        <div class="attendee">
+          <img class="attendee-avatar" id="ticket-avatar" src="assets/images/logo-mark.svg" alt="" width="80" height="80">
+          <div>
+            <p class="attendee-name" id="ticket-name"></p>
+            <a class="attendee-github" id="ticket-github" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/icon-github.svg" alt="GitHub" width="22" height="23">
+              <span id="ticket-handle"></span>
+            </a>
+          </div>
+        </div>
+        <p class="ticket-number" id="ticket-number"></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Coding Conf. Zachary Hutton, CIT2011 - Web Programming.</p>
+  </footer>
+
+  <script src="js/ticket.js"></script>
+</body>
+</html>
